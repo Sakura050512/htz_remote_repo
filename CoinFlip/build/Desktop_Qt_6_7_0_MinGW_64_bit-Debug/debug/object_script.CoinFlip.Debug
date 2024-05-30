@@ -1,0 +1,13 @@
+debug/chooseleavelscene.o
+debug/dataconfig.o
+debug/main.o
+debug/mainscene.o
+debug/mycoin.o
+debug/mypushbutton.o
+debug/playscene.o
+debug/qrc_res.o
+debug/moc_chooseleavelscene.o
+debug/moc_dataconfig.o
+debug/moc_mainscene.o
+debug/moc_mycoin.o
+debug/moc_playscene.o

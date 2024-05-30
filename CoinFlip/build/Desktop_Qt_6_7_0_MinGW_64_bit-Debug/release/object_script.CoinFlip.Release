@@ -1,0 +1,13 @@
+release/chooseleavelscene.o
+release/dataconfig.o
+release/main.o
+release/mainscene.o
+release/mycoin.o
+release/mypushbutton.o
+release/playscene.o
+release/qrc_res.o
+release/moc_chooseleavelscene.o
+release/moc_dataconfig.o
+release/moc_mainscene.o
+release/moc_mycoin.o
+release/moc_playscene.o
