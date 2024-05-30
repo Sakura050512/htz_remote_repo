@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+	<style type="text/css">
+		.mui-active .mui-icon, .mui-active .mui-tab-label{
+			color:deepskyblue;
+		}
+	</style>
+		
+   
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<h1 class="mui-title">首页</h1>
+	</header>
+	<div class="mui-content">
+		<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						Item 1
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						 Item 2
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						 Item 3
+					</a>
+				</li>
+			</ul>
+	</div>
+	<!--底部选项卡-->
+	    <nav class="mui-bar mui-bar-tab">
+	    	<a class="mui-tab-item mui-active" href="Demo_index.html">
+	    		<span class="mui-icon mui-icon-home"></span>
+	    		<span class="mui-tab-label">首页</span>
+	    	</a>
+	    	<a class="mui-tab-item" href="Demo_list.html">
+	    		<span class="mui-icon mui-icon-list"></span>
+	    		<span class="mui-tab-label">待办事项</span>
+	    	</a>
+	    	<a class="mui-tab-item" href="Demo_person.html">
+	    		<span class="mui-icon mui-icon-person"></span>
+	    		<span class="mui-tab-label">我的</span>
+	    	</a>
+	    </nav>
+	
+	<script type="text/javascript">
+	  	mui.init();
+		//实现底部选项卡切换功能
+		mui.plusReady(function () {
+			//定义一个容器，用于存储底部选项卡所关联的页面
+			var pages = ["Demo_index.html","Demo_list.html","Demo_person.html"];
+			//获取当前窗口对象
+			var ws = plus.webview.currentWebview();
+			//s=设置页面窗口样式
+			var pageStyle = {
+				top:"0px",
+				bottom:"50px"
+			};
+			//循环数组，为每个页面创建webview窗口对象
+			for(var i=0;i<pages.length;i++){
+				//将每次循环提取的页面创建为webview窗口对象
+				var item = plus.webview.create(pages[i],pages[i],pageStyle);
+				//将每个webview窗口对象追加至当前ws对象中
+				ws.append(item);
+			}
+			//设置默认打开窗口
+			plus.webview.show(pages[0]);
+			//选项卡事件监听
+			mui(".mui-bar-tab").on("tap","a",function(){
+				//获取被点击标签的hf属性
+				var href = this.getAttribute("href");
+				//展示对应的页面
+				plus.webview.show(href);
+			});
+		});
+	</script>
+	
+</body>
+</html>
