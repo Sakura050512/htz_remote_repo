@@ -1,8 +1,8 @@
 # htz_remote_repo
 ## This is an explanatory document.
-Untitled-1.html  ²âÊÔÎÄ¼ş
-hello.txt ²âÊÔÎÄ¼ş
-ConFlip QT×öµÄĞ¡ÓÎÏ·
-Demo Ã»ÓĞÍê¹¤µÄmuiÏîÄ¿
++ Untitled-1.html  æµ‹è¯•æ–‡ä»¶
++ hello.txt æµ‹è¯•æ–‡ä»¶
++ ConFlip å¤§ä¸€ç”¨QTåšçš„å°æ¸¸æˆ(cppå¤§ä½œä¸š)
++ Demo æ²¡æœ‰å®Œå·¥çš„muié¡¹ç›®
 
 
